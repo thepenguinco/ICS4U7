@@ -1,0 +1,22 @@
+7. Which of the following conversions require an explicit cast?
+a. long to double    IMPLICIT
+b. byte to char      EXPLICIT
+c. float to double   IMPLICIT
+d. byte to long      IMPLICIT
+e. short to char     EXPLICIT
+f. double to long    EXPLICIT
+
+8. Using the following declarations, rewrite the statements to include the
+appropriate type casting, most accurate rounding where necessary. If type
+casting is not necessary, explain why.
+
+int j = 5;
+double k = 1.6;
+int y;
+double z;
+
+a) y = j * k;        TYPECASTING REQUIRED TO INT: INTEGERS CANNOT HOLD A RESULTANT DOUBLE VALUE
+b) z = j * k;        NO TYPECASTING REQUIRED: DOUBLE VALUES CAN HOLD A RESULTANT DOUBLE VALUE
+c) z = k * k;= k;    THIS EXPRESSION IS NOT VALID
+d) k = j;            NO TYPECASTING REQUIRED: DOUBLE VALUES CAN HOLD INTEGER VALUES
+e) y = j + 3;        NO TYPECASTING REQUIRED: ALL DATATYPES IN THIS EXPRESSION ARE INTEGERS
