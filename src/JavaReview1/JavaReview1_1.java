@@ -1,3 +1,5 @@
+package JavaReview1;
+
 /* A not so terrible mess */
 public class JavaReview1_1
 {
