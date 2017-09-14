@@ -1,2 +1,0 @@
-1) There is no logic written to handle when the age is set to 18 or 65.
-

@@ -2,6 +2,9 @@ package JavaReview2;
 
 import java.util.*;
 
+/*
+ * PackageCheck.java
+ */
 public class JavaReview2_2 
 {
 	public static void main(String[] args) 
@@ -16,16 +19,20 @@ public class JavaReview2_2
 		System.out.print("Enter the height of the package in cm: ");
 		double height = scanner.nextDouble();
 		double volume = height * weight* length;
-		if (weight > 27 && volume > 100000) { 
+		if (weight > 27 && volume > 100000) 
+		{ 
 			System.out.println("Too heavy and too large!"); 
 		}
-		else if (weight > 27) { 
+		else if (weight > 27) 
+		{ 
 			System.out.println("Too heavy!"); 
 		}
-		else if (volume > 100000) { 
+		else if (volume > 100000) 
+		{ 
 			System.out.println("Too large!"); 
 		}
-		else { 
+		else 
+		{ 
 			System.out.println("Perfect!"); 
 		}
 	}
