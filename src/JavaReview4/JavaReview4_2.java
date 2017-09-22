@@ -81,7 +81,8 @@ public class JavaReview4_2
 	
 	public static void main(String[] args) 
 	{
-	    int[][] sampleArray = new int[][] {
+	    int[][] sampleArray = new int[][] 
+	    {
 	        { 1, 2, 3 },{ 1, 2, 3, 4},
 	    };
 	    System.out.println(getSize(sampleArray));
