@@ -45,7 +45,8 @@ public class JavaReview4_4
 		return minesweeperBoard;
 		
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Scanner scanner = new Scanner(System.in);
 		int N = scanner.nextInt();
 		int M = scanner.nextInt();
