@@ -1,0 +1,4 @@
+Stability only applies if there are objects with duplicate keys.  
+Stable insertion sort keeps the relative values of the sort in the same order as the unsorted collection for values with the same key.
+
+Unstable insertion sort ignores the original relative order of elements with the same key.

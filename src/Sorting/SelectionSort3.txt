@@ -1,0 +1,6 @@
+In our version of selection sort, if the smallest item is already at right location,
+the algorithm still swaps that value with itself, even though it is not necessary.
+a) How could the algorithm be changed to avoid this unnecessary swapping?
+	NON FUNCTIONAL
+b) Why might it better to leave the algorithm as it is?
+	NON FUNCTIONAL
