@@ -1,4 +1,7 @@
+package BinaryTree;
+
 import java.util.*;
+
 public class FullBinaryTreeTester
 {
     static Scanner sc = new Scanner(System.in);         
@@ -7,7 +10,6 @@ public class FullBinaryTreeTester
     final static int DELETE = 2;
     final static int SIZE = 3;
     final static int EMPTY = 4;
-    final static int REPLACE = 5;
     final static int LOOKUP = 6;
     final static int PRINT_PRE_ORDER=7;
     final static int PRINT_IN_ORDER = 8;
@@ -15,7 +17,7 @@ public class FullBinaryTreeTester
     final static int EXIT = 0;
 
     static boolean quit = false;
-    static BinaryTree data = new BinaryTree ();
+    static BinaryTree data = new BinaryTree();
 
     public static void main (String[] args)
     {
@@ -31,7 +33,7 @@ public class FullBinaryTreeTester
 
     } // main method
    
-    public static void displaydata ()
+    public static void displaydata()
     {
         // for (int i = 1 ; i <= data.size () ; i++)
         // {
@@ -40,7 +42,7 @@ public class FullBinaryTreeTester
 
     }
 
-    public static void displayMenu ()
+    public static void displayMenu()
     {
 
         System.out.println ("List Menu\n");
@@ -48,7 +50,6 @@ public class FullBinaryTreeTester
         System.out.println (DELETE + " : Delete an item from the tree");
         System.out.println (SIZE + " : Get the size of the tree");
         System.out.println (EMPTY + " : Find out if the list is empty");
-        System.out.println (REPLACE + " : Replace an item in the tree");
         System.out.println (LOOKUP + " : Look up an item in the tree");
         System.out.println (PRINT_PRE_ORDER + " : Print the tree in the pre-order");
         System.out.println (PRINT_IN_ORDER + " : Print the tree in the in-order");
@@ -57,11 +58,11 @@ public class FullBinaryTreeTester
 
     }
 
-    public static void executeOptions ()
+    public static void executeOptions()
     {
         int option;
         int index;
-        String guess = new String ("");
+        int item;
 
         System.out.print ("Enter your menu option: ");
         option = sc.nextInt ();
@@ -69,22 +70,41 @@ public class FullBinaryTreeTester
 
         switch (option)
         {
+	        case INSERT:
+	            System.out.print ("Enter the item to be inserted: ");
+	            item = sc.nextInt();
+	            data.insert(item);
+	        	System.out.println("Inserted item");
+	        	break;
+            case DELETE:
+	            System.out.print ("Enter the item to be deleted: ");
+	            item = sc.nextInt();
+            	System.out.println("Deletion: " + data.remove(item));
+            	break;
+            case SIZE:
+            	System.out.println(data.getSize(data.getRoot()));
+            	break;
+            case EMPTY:
+            	System.out.println(data.isEmpty());
+            	break;
             case LOOKUP:
-            System.out.print ("Enter the item to be found: ");
-            guess = sc.nextLine ();
-            guess = (String) data.search((Comparable)guess);
-            if (guess == null)
-                System.out.println ("data not found");
-            else
-                System.out.println ("Item found is: " + guess);
-            break;
-
+	            System.out.print ("Enter the item to be found: ");
+	            item = sc.nextInt();
+	            System.out.println(data.search(item));
+	            break;
+            case PRINT_PRE_ORDER:
+            	data.preOrder(data.getRoot());
+            	break;
+            case PRINT_IN_ORDER:
+            	data.inOrder(data.getRoot());
+            	break;
+            case PRINT_POST_ORDER:
+            	data.postOrder(data.getRoot());
+            	break;
+            case EXIT:
+            	System.exit(0);
             default:
-            System.out.println ("Testing... that's not a valid option");
-
+            	System.out.println ("Testing... that's not a valid option");
         }
-
     }
-   
-} // ListTester class
-
+}
